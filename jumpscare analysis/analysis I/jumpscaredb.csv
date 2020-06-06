@@ -1,0 +1,628 @@
+movie_name,director,year,jump_count,is_netflix,imdb_rating
+[Rec],"Jaume Balagueró, Paco Plaza",2007,11,No,7.5
+10 Cloverfield Lane,Dan Trachtenberg,2016,8,No,7.3
+1408,Mikael Håfström,2007,8,No,6.8
+1917,Sam Mendes,2019,10,No,8.5
+1922,Zak Hilditch,2017,2,Yes,6.5
+1BR,David Marmor,2019,3,No,5.8
+28 Days Later,Danny Boyle,2002,10,No,7.6
+28 Weeks Later,Juan Carlos Fresnadillo,2007,17,No,7
+30 Days of Night,David Slade,2007,9,No,6.6
+31,Rob Zombie,2016,8,No,5.1
+47 Meters Down,Johannes Roberts,2017,11,Yes,5.7
+47 Meters Down: Uncaged,Johannes Roberts,2019,13,No,5
+8213: Gacy House,Anthony Fankhauser,2010,2,No,3.2
+A Cure for Wellness,Gore Verbinski,2016,6,No,6.5
+A Ghost Story,David Lowery,2017,3,No,7
+A Girl Walks Home Alone at Night,Ana Lily Amirpour,2014,0,No,7.1
+A Nightmare on Elm Street,Samuel Bayer,2010,15,No,5.2
+A Nightmare on Elm Street,Wes Craven,1984,11,No,7.5
+A Nightmare on Elm Street 2: Freddy’s Revenge,Jack Sholder,1985,8,No,5.3
+A Nightmare on Elm Street 3: Dream Warriors,Chuck Russell,1987,11,No,6.5
+A Quiet Place,John Krasinski,2018,14,No,7.5
+A Tale of Two Sisters,Jee-woon Kim,2003,14,No,7.3
+Absentia,Mike Flanagan,2011,8,No,5.8
+After Midnight,"Jeremy Gardner, Christian Stella",2019,6,No,5.2
+Alien,Ridley Scott,1979,11,No,8.5
+Alien 3,David Fincher,1992,14,No,6.4
+Alien: Covenant,Ridley Scott,2017,6,No,6.7
+Alien: Resurrection,Jean-Pierre Jeunet,1997,9,No,6.3
+Aliens,James Cameron,1986,13,No,8.4
+Alone,"Banjong Pisanthanakun, Parkpoom Wongpoom",2007,21,No,6.6
+Altered States,Ken Russell,1980,2,No,6.9
+Amityville: The Awakening,Franck Khalfoun,2017,11,No,5.2
+Amnesiac,Michael Polish,2015,1,No,4.3
+An American Werewolf in London,John Landis,1981,14,No,7.6
+An American Werewolf in Paris,Anthony Waller,1997,11,No,5.1
+Anaconda,Luis Llosa,1997,9,No,4.6
+Anacondas: The Hunt for Blood Orchid,Dwight H. Little,2004,7,No,4.7
+Anna,Jorge Dorado,2013,5,No,6.5
+Anna and the Apocalypse,John McPhail,2017,6,No,6
+Annabelle,John R. Leonetti,2014,11,No,5.4
+Annabelle Comes Home,Gary Dauberman,2019,20,No,6
+Annabelle: Creation,David F. Sandberg,2017,23,No,6.8
+Annihilation,Alex Garland,2018,4,Yes,6.9
+Antrum,"David Amito, Michael Laicini",2018,0,No,4.7
+Apollo 18,Gonzalo López-Gallego,2011,10,No,5.2
+Apostle,Gareth Evans,2018,5,Yes,6.6
+Army of Darkness – Director Cut,Sam Raimi,1992,8,No,7.6
+Army of Darkness – Theatrical Cut,Sam Raimi,1992,9,No,7.6
+Arrival,Denis Villeneuve,2016,3,No,7.9
+"As Above, So Below",John Erick Dowdle,2014,7,Yes,6.1
+Attack the Block,Joe Cornish,2011,12,No,6.6
+Audition,Takashi Miike,1999,1,No,7.2
+Backcountry,Adam MacDonald,2014,4,Yes,6.1
+Backtrack,Michael Petroni,2015,14,No,5.9
+Banshee Chapter,Blair Erickson,2013,22,No,5.5
+Before I Wake,Mike Flanagan,2016,9,Yes,6.1
+Below,David Twohy,2002,11,No,6.1
+Berberian Sound Studio,Peter Strickland,2012,0,No,6.2
+Berlin Syndrome,Cate Shortland,2017,1,No,6.3
+Better Watch Out,Chris Peckover,2016,11,No,6.5
+Bird Box,Susanne Bier,2018,4,Yes,6.8
+Black Christmas,Bob Clark,1974,4,No,7.2
+Black Christmas,Sophia Takal,2019,8,No,3.2
+Black Swan,Darren Aronofsky,2010,10,No,8
+Blade,Stephen Norrington,1998,1,No,7.1
+Blair Witch,Adam Wingard,2016,18,No,5
+Bone Tomahawk,S. Craig Zahler,2015,0,No,7.1
+Brahms: The Boy II,William Brent Bell,2020,11,No,4.5
+Bram Stoker’s Dracula,Francis Ford Coppola,1992,1,No,7.5
+Bride of Chucky,Ronny Yu,1998,11,No,5.3
+Brightburn,David Yarovesky,2019,20,No,6.2
+Cabin Fever,Eli Roth,2002,10,No,5.6
+Cam,Daniel Goldhaber,2018,1,Yes,6
+Candyman,Bernard Rose,1992,16,No,6.6
+Cape Fear,Martin Scorsese,1991,4,No,7.3
+Cargo,"Ben Howling, Yolanda Ramke",2017,2,Yes,6.3
+Carrie,Brian De Palma,1976,1,No,7.4
+Carrie,Kimberly Peirce,2013,4,No,5.9
+Case 39,Christian Alvart,2009,10,No,6.2
+Cat People,Jacques Tourneur,1942,2,No,7.4
+Cell,Tod Williams,2016,5,No,4.3
+Chernobyl Diaries,Bradley Parker,2012,16,Yes,5
+Child Eater,Erlingur Óttar Thoroddsen,2016,8,No,4.3
+Child’s Play,Tom Holland,1988,8,No,6.5
+Child’s Play,Lars Klevberg,2019,16,No,5.9
+Children of the Corn,Fritz Kiersch,1984,8,No,5.6
+Chopping Mall,Jim Wynorski,1986,5,No,5.6
+Cloverfield,Matt Reeves,2008,7,No,7
+Clown,Jon Watts,2014,11,No,5.6
+Color Out of Space,Richard Stanley,2019,4,No,6.2
+Cooties,"Jonathan Milott, Cary Murnion",2014,15,No,5.8
+Countdown,Justin Dec,2019,17,No,5.3
+Creep,Patrick Kack-Brice,2014,10,Yes,6.2
+Creep,Christopher Smith,2004,9,No,5.6
+Creep 2,Patrick Brice,2017,6,Yes,6.3
+Crimson Peak,Guillermo del Toro,2015,9,No,6.6
+Cube,Vincenzo Natali,1997,1,No,7.3
+Cujo,Lewis Teague,1983,4,No,6
+Cult of Chucky,Don Mancini,2017,14,Yes,5.2
+Cyberbully,Ben Chanan,2015,1,No,7
+Daniel Isn’t Real,Adam Egypt Mortimer,2020,6,No,6
+Dark Encounter,Carl Strathie,2019,2,No,5
+Dark Shadows,Tim Burton,2012,2,No,6.2
+Dark Skies,Scott Stewart,2013,11,No,6.3
+Dark Was The Night,Jack Heller,2014,16,No,5.6
+Dark Water,Walter Salles,2005,7,No,5.5
+Darkness Falls,Jonathan Liebesman,2003,19,No,5
+Dawn of the Dead,Zack Snyder,2004,10,No,7.4
+Day of the Dead,George A. Romero,1985,10,No,7.2
+Dead Alive,Peter Jackson,1992,3,No,7.6
+Dead Calm,Phillip Noyce,1989,2,No,6.8
+Dead End,"Jean-Baptiste Andrea, Fabrice Canepa",2003,9,No,6.7
+Dead Silence,James Wan,2007,15,No,6.2
+Death Note,Adam Wingard,2017,6,Yes,4.6
+Deathgasm,Jason Lei Howden,2015,7,No,6.3
+Deep Blue Sea,Renny Harlin,1999,10,No,5.8
+Deep Dark,Michael Medaglia,2015,2,No,5
+Deep Red,Dario Argento,1975,7,No,7.7
+Deliver Us From Evil,Scott Derrickson,2014,16,No,6.2
+Dementia,Mike Testin,2015,0,No,5
+Demonic,Will Canon,2015,17,Yes,5.3
+Devil,John Erick Dowdle,2010,4,No,6.3
+Devil’s Due,"Matt Bettinelli-Olpin, Tyler Gillett",2014,13,No,4.1
+Devil’s Pass,Renny Harlin,2013,10,No,5.7
+Dismissed,Benjamin Arfmann,2017,0,No,5.8
+Disturbia,D.J. Caruso,2007,13,No,6.9
+Dog Soldiers,Neil Marshall,2002,13,No,6.8
+Don’t Be Afraid of the Dark,Troy Nixey,2010,8,No,5.6
+Don’t Breathe,Fede Alvarez,2016,17,No,7.2
+Don’t Knock Twice,Caradog W. James,2016,19,No,5.2
+Donnie Darko,Richard Kelly,2001,3,No,8.1
+Don’t Hang Up,"Damien Macé, Alexis Wajsbrot",2016,4,No,5.6
+Doom,Andrzej Bartkowiak,2005,15,Yes,5.2
+Dracula Untold,Gary Shore,2014,4,No,6.3
+Drag Me To Hell,Sam Raimi,2009,23,No,6.6
+Dream House,Jim Sheridan,2011,3,No,6
+Dreamcatcher,Lawrence Kasdan,2003,16,No,5.5
+Dreamkatcher,Kerry Harris,2020,4,No,3.8
+Eden Lake,James Watkins,2008,3,No,6.8
+Eli,Ciarán Foy,2019,13,Yes,5.9
+Elle,Paul Verhoeven,2016,7,No,7.3
+Emelie,Michael Thelin,2015,3,Yes,5.4
+Enter the Void,Gaspar Noé,2009,3,No,7.3
+Escape Room,Adam Robitel,2019,4,No,6.3
+Europa Report,Sebastián Cordero,2013,1,No,6.5
+Event Horizon,Paul W.S. Anderson,1997,11,No,6.7
+Evil Dead,Fede Alvarez,2013,20,No,6.5
+Evil Dead II,Sam Raimi,1987,27,No,7.8
+Exorcist: The Beginning,Renny Harlin,2004,17,No,5.1
+Extinction,Miguel Ángel Vivas,2015,12,No,5.8
+Extraterrestrial,Colin Minihan,2014,30,No,5
+Eyes Without a Face,Georges Franju,1960,1,No,7.7
+Fantasy Island,Jeff Wadlow,2020,13,No,4.7
+Fear Clinic,Robert Hall,2014,13,No,5
+Final Destination,James Wong,2000,4,Yes,6.7
+Final Destination 2,David R. Ellis,2003,3,Yes,6.2
+Final Destination 3,James Wong,2006,5,Yes,5.8
+Final Destination 5,Steven Quale,2011,5,No,5.9
+Flatliners,Niels Arden Oplev,2017,20,No,5
+Flatliners,Joel Schumacher,1990,7,Yes,6.6
+Frailty,Bill Paxton,2001,0,No,7.3
+Freddy vs. Jason,Ronny Yu,2003,24,No,5.8
+Friday the 13th,Marcus Nispel,2009,23,No,5.6
+Friday the 13th,Sean S. Cunningham,1980,10,No,6.5
+Friend Request,Simon Verhoeven,2016,21,Yes,5.4
+Fright Night,Craig Gillespie,2011,10,No,6.4
+Funny Games,Michael Haneke,1997,1,No,7.6
+Funny Games,Michael Haneke,2007,1,No,6.5
+Gerald’s Game,Mike Flanagan,2017,3,Yes,6.6
+Get Out,Jordan Peele,2017,10,No,7.8
+Ghost Ship,Steve Beck,2002,12,Yes,5.5
+Ghost Stories,"Jeremy Dyson, Andy Nyman",2017,21,No,6.6
+Ghostland,Pascal Laugier,2018,21,No,6.3
+Girl on the Third Floor,Travis Stevens,2019,5,No,4.6
+Goodnight Mommy,"Severin Fiala, Veronika Franz",2014,1,No,6.7
+Goosebumps,Rob Letterman,2015,10,No,6.4
+Gothika,Mathieu Kassovitz,2003,16,Yes,5.8
+Grave Encounters,"Colin Minihan, Stuart Ortiz",2011,12,No,6.1
+Green Room,Jeremy Saulnier,2015,1,Yes,7.2
+Gremlins,Joe Dante,1984,17,No,7.2
+Gretel & Hansel,Oz Perkins,2020,5,No,5.2
+Guns Akimbo,Jason Lei Howden,2020,2,No,6.3
+Halloween,Rob Zombie,2007,9,No,6.1
+Halloween,David Gordon Green,2018,14,No,7.5
+Halloween,John Carpenter,1978,13,No,7.9
+Halloween H20: 20 Years Later,Steve Miner,1998,16,No,5.6
+Halloween II,Rick Rosenthal,1981,8,No,6.5
+Halloween II,Rob Zombie,2009,16,No,4.9
+Hannibal,Ridley Scott,2001,2,No,6.8
+Hannibal Rising,Peter Webber,2007,0,No,6.2
+Happy Death Day,Christopher Landon,2017,8,No,6.7
+Happy Death Day 2U,Christopher Landon,2019,7,No,6.5
+Haunt,Scott Beck & Bryan Woods,2019,16,No,6.3
+Hell Fest,Gregory Plotkin,2018,28,No,5.5
+Hellboy,Guillermo del Toro,2004,6,No,6.8
+Hellraiser,Clive Barker,1987,5,No,7.1
+Here Alone,Rod Blackhurst,2016,2,Yes,5.6
+Hereditary,Ari Aster,2018,8,No,7.3
+Hidden,"Matt Duffer, Ross Duffer",2015,6,No,6.4
+Hide and Seek,John Polson,2005,16,No,5.9
+High Tension,Alexandre Aja,2003,8,No,6.9
+Holidays,"Anthony Scott Burns,Kevin Kolsch, Nicholas McCarthy, Adam Egypt Mortimer, Ellen Reid, Gary Shore, Kevin Smith, Sarah Adina Smith, Scott Stewart, Dennis Widmyer",2016,5,Yes,5.1
+Hollow Man,Paul Verhoeven,2000,9,No,5.7
+Honeymoon,Leigh Janiak,2014,3,No,5.6
+Horns,Alexandre Aja,2013,3,No,6.5
+Horse Girl,Jeff Baena,2020,1,Yes,5.9
+Hostel,Eli Roth,2005,2,No,5.9
+Hostel: Part II,Eli Roth,2007,5,No,5.5
+Hostel: Part III,Scott Spiegel,2011,6,Yes,4.6
+Hotel Inferno,Giulio De Santi,2013,3,No,4.7
+Hotel Inferno 2: The Cathedral of Pain,"Giulio De Santi, Tiziana Machella",2017,5,No,6
+Hounds of Love,Ben Young,2016,0,No,6.6
+Hour of the Wolf,Ingmar Bergman,1968,1,No,7.7
+House,Nobuhiko Obayashi,1977,0,No,7.4
+House,Steve Miner,1986,11,No,6.2
+House of 1000 Corpses,Rob Zombie,2003,6,No,6
+House of Wax,Jaume Collet-Serra,2005,16,No,5.3
+House on Haunted Hill,William Malone,1999,14,No,5.6
+Hush,Mike Flanagan,2016,7,Yes,6.6
+I Am Legend,Francis Lawrence,2007,9,No,7.2
+I Am Not a Serial Killer,Billy O’Brien,2016,3,No,6.2
+I Am the Pretty Thing That Lives in the House,Oz Perkins,2016,4,Yes,4.7
+I Know What You Did Last Summer,Jim Gillespie,1997,13,Yes,5.6
+Identity,James Mangold,2003,11,No,7.3
+Idle Hands,Rodman Flender,1999,10,No,6.2
+In The Mouth Of Madness,John Carpenter,1994,10,No,7.2
+In the Tall Grass,Vincenzo Natali,2019,4,Yes,5.5
+Incarnate,Brad Peyton,2016,9,No,5.1
+Inland Empire,David Lynch,2006,8,No,7
+Inside,"Alexandre Bustillo, Julien Maury",2007,4,No,6.9
+Insidious,James Wan,2010,24,No,6.8
+Insidious: Chapter 2,James Wan,2013,22,No,6.6
+Insidious: Chapter 3,Leigh Whannell,2015,15,No,6.1
+Insidious: The Last Key,Adam Robitel,2018,15,No,5.8
+Interview With the Vampire,Neil Jordan,1994,6,No,7.6
+Intruders,Adam Schindler,2015,4,No,5.7
+Invasion of the Body Snatchers,Philip Kaufman,1978,4,No,7.4
+It,Andy Muschietti,2017,23,No,7.4
+It Chapter Two,Andy Muschietti,2019,24,No,7
+It Comes at Night,Trey Edward Shults,2017,5,No,6.2
+It Follows,David Robert Mitchell,2014,5,No,6.9
+Jacob’s Ladder,Adrian Lyne,1990,4,No,7.5
+Jaws,Steven Spielberg,1975,4,No,8.1
+Jeepers Creepers,Victor Salva,2001,11,No,6.1
+Jennifer’s Body,Karyn Kusama,2009,6,No,5.1
+Jessabelle,Kevin Greutert,2014,9,No,5.4
+Jigsaw,"Michael Spierig, Peter Spierig",2017,7,No,5.8
+Joy Ride,John Dahl,2001,2,No,6.6
+Julia’s Eyes,Guillem Morales,2010,7,No,6.6
+Jurassic Park,Steven Spielberg,1993,9,No,8.1
+Jurassic World,Colin Trevorrow,2015,5,No,7
+Jurassic World: Fallen Kingdom,J.A. Bayona,2018,7,No,6.5
+Kill List,Ben Wheatley,2011,1,No,6.3
+Knock Knock,Eli Roth,2015,2,No,4.9
+Knowing,Alex Proyas,2009,2,No,6.2
+Krampus,Michael Dougherty,2015,10,No,6.2
+Lake Mungo,Joel Anderson,2008,1,No,6.1
+Lake Placid,Steve Miner,1999,12,No,5.6
+Last Shift,Anthony DiBlasi,2014,17,No,5.7
+Leatherface,"Alexandre Bustillo, Julien Maury",2017,13,No,5.2
+Let Me In,Matt Reeves,2010,3,No,7.2
+Let The Right One In,Tomas Alfredson,2008,2,No,8
+Let Us Prey,Brian O’Malley,2014,7,No,5.6
+Life,Daniel Espinosa,2017,8,No,6.8
+Lights Out,David F. Sandberg,2016,19,No,6.4
+Little Evil,Eli Craig,2017,7,Yes,5.8
+Living Dark: The Story of Ted the Caver,David Hunt,2013,14,No,5.1
+Lord of Illusions,Clive Barker,1995,15,No,6.1
+Ma,Tate Taylor,2019,3,No,5.7
+Maggie,Henry Hobson,2015,4,No,5.6
+Malevolent,Olaf de Fleur Johannesson,2018,8,Yes,4.8
+Malice,Harold Becker,1993,3,No,6.4
+Mama,Andrés Muschietti,2013,13,No,6.2
+Mandy,Panos Cosmatos,2018,5,No,6.9
+Marrowbone,Sergio G. Sánchez,2017,5,No,6.6
+Martyrs,Pascal Laugier,2008,15,No,7.1
+May,Lucky McKee,2002,0,No,6.7
+Mayhem,Joe Lynch,2017,2,No,6.5
+Megan Is Missing,Michael Goi,2011,1,No,4.9
+Midsommar,Ari Aster,2019,3,No,7.4
+Mirrors,Alexandre Aja,2008,15,No,6.2
+Misery,Rob Reiner,1990,3,No,7.8
+Mom and Dad,Brian Taylor,2017,5,No,5.7
+Morgan,Luke Scott,2016,3,No,5.9
+Mother!,Darren Aronofsky,2017,7,No,6.6
+Mulholland Drive,David Lynch,2001,1,No,8
+My Bloody Valentine,George Mihalka,1981,11,No,6.2
+My Friend Dahmer,Marc Meyers,2017,0,No,6.5
+Nerve,"Henry Joost, Ariel Schulman",2016,1,No,6.7
+Night of the Comet,Thom Eberhardt,1984,2,No,6.4
+Nocturnal Animals,Tom Ford,2016,1,No,7.5
+Noroi: The Curse,Kôji Shiraishi,2005,4,No,7
+Oculus,Mike Flanagan,2013,14,No,6.5
+Odd Thomas,Stephen Sommers,2013,10,No,6.9
+One Hour Photo,Mark Romanek,2002,1,No,6.8
+One Missed Call,Eric Valette,2008,15,No,3.9
+Only Lovers Left Alive,Jim Jarmusch,2013,0,Yes,7.3
+Orphan,Jaume Collet-Serra,2009,12,No,7
+Ouija,Stiles White,2014,16,No,4.4
+Ouija: Origin of Evil,Mike Flanagan,2016,18,No,6.1
+Overlord,Julius Avery,2018,12,No,6.7
+P2,Franck Khalfoun,2007,16,No,5.9
+Pan’s Labyrinth,Guillermo del Toro,2006,6,No,8.2
+Pandorum,Christian Alvart,2009,13,Yes,6.8
+Paranormal Activity,Oren Peli,2007,10,No,6.3
+Paranormal Activity 2,Tod Williams,2010,14,No,5.7
+Paranormal Activity 3,"Henry Joost, Ariel Schulman",2011,20,No,5.9
+Paranormal Activity 4,"Ariel Schulman, Henry Joost",2012,21,No,4.6
+Paranormal Activity: The Ghost Dimension,Gregory Plotkin,2015,29,No,4.6
+Patient Zero,Stefan Ruzowitzky,2018,6,No,4.3
+Pay The Ghost,Uli Edel,2015,13,No,5.2
+Perfect,Eddie Alcazar,2018,0,No,5.6
+Personal Shopper,Olivier Assayas,2016,4,No,6.2
+Pet,Carles Torrens,2016,2,No,5.7
+Pet Sematary,"Kevin Kölsch, Dennis Widmyer",2019,14,No,6.4
+Pet Sematary,Mary Lambert,1989,13,No,6.6
+Phantasm,Don Coscarelli,1979,14,No,6.8
+Planet Terror,Robert Rodriguez,2007,14,No,7.2
+Poltergeist,Tobe Hooper,1982,9,Yes,7.4
+Poltergeist – Extended Cut,Gil Kenan,2015,22,No,5
+Poltergeist – Theatrical Cut,Gil Kenan,2015,21,No,5
+Pontypool,Bruce McDonald,2008,1,No,6.7
+Predator,John McTiernan,1987,7,No,7.8
+Prevenge,Alice Lowe,2016,0,No,6.1
+Pride and Prejudice and Zombies,Burr Steers,2016,7,No,5.8
+Prince of Darkness,John Carpenter,1987,7,No,6.7
+Prometheus,Ridley Scott,2012,7,No,7
+Psycho,Alfred Hitchcock,1960,2,No,8.6
+Quarantine,John Erick Dowdle,2008,14,No,6
+Ravenous,Antonia Bird,1999,4,No,7.1
+Raw,Julia Ducournau,2016,3,Yes,7.1
+Ready or Not,"Matt Bettinelli-Olpin, Tyler Gillett",2019,10,No,6.9
+Re-Animator,Stuart Gordon,1985,4,No,7.3
+Red Dragon,Brett Ratner,2002,6,No,7.2
+Regression,Alejandro Amenábar,2015,3,No,5.7
+Repulsion,Roman Polanski,1965,7,No,7.8
+Resident Evil,Paul W.S. Anderson,2002,7,No,6.7
+Resident Evil: The Final Chapter,Paul W.S. Anderson,2016,29,No,5.6
+Resolution,"Justin Benson, Aaron Moorhead",2012,2,No,6.2
+Restoration,Zack Ward,2016,10,No,4
+Ring,Hideo Nakata,1998,5,No,7.3
+Rings,F. Javier Gutiérrez,2017,19,No,4.5
+Ringu 0: Birthday,Norio Tsuruta,2000,0,No,6
+Ringu 2,Hideo Nakata,1999,1,No,5.9
+Ringu: Kanzenban,Chisui Takigawa,1995,2,No,6.3
+Rosemary’s Baby,Roman Polanski,1968,0,No,8
+Sadako,Hideo Nakata,2019,3,No,4.1
+Sadako 3D,Tsutomu Hanabusa,2012,15,No,3.8
+Sadako 3D 2,Tsutomu Hanabusa,2013,15,No,4.4
+Saw,James Wan,2004,5,No,7.7
+Saw II,Darren Lynn Bousman,2005,5,No,6.6
+Saw III,Darren Lynn Bousman,2006,5,No,6.2
+Saw IV,Darren Lynn Bousman,2007,6,No,5.9
+Saw V,David Hackl,2008,5,No,5.8
+Saw VI,Kevin Greutert,2009,2,No,6
+Scary Movie,Keenen Ivory Wayans,2000,8,No,6.2
+Scary Movie 2,Keenen Ivory Wayans,2001,8,Yes,5.3
+Scary Stories to Tell in the Dark,André Øvredal,2019,8,No,6.2
+Scream,Wes Craven,1996,19,No,7.2
+Scream 2,Wes Craven,1997,19,No,6.1
+Scream 3,Wes Craven,2000,23,No,5.5
+Scream 4,Wes Craven,2011,18,Yes,6.2
+Searching,Aneesh Chaganty,2018,0,No,7.7
+Secret Window,David Koepp,2004,10,No,6.6
+Session 9,Brad Anderson,2001,0,No,6.5
+Seven,David Fincher,1995,1,No,8.6
+Seven in Heaven,Chris Eigeman,2018,8,Yes,5.3
+Shadow People,Matthew Arnold,2013,10,No,5.3
+Shaun of the Dead,Edgar Wright,2004,13,No,8
+Shutter,"Banjong Pisanthanakun, Parkpoom Wongpoom",2004,11,Yes,7.1
+Shutter Island,Martin Scorsese,2010,9,No,8.1
+Signs,M. Night Shyamalan,2002,8,No,6.7
+Silent Hill,Christophe Gans,2006,7,No,6.6
+Silent Hill: Revelation,Michael J. Bassett,2012,22,No,5
+Silver Bullet,Dan Attias,1985,15,No,6.4
+Sinister,Scott Derrickson,2012,17,No,6.8
+Sinister 2,Ciarán Foy,2015,19,No,5.2
+Skinwalker Ranch,Devin McGinn,2013,5,No,5.1
+Sleepaway Camp,Robert Hiltzik,1983,6,No,6.3
+Sleepy Hollow,Tim Burton,1999,1,No,7.4
+Slender Man,Sylvain White,2018,15,No,3.1
+Slither,James Gunn,2006,10,No,6.5
+Slumber,Jonathan Hopkins,2017,12,No,4.9
+Species,Roger Donaldson,1995,7,No,5.8
+Sphere,Barry Levinson,1998,4,Yes,6
+Spiral,George Iida,1998,1,No,5.2
+Splinter,Toby Wilkins,2008,10,No,6.1
+Split,M. Night Shyamalan,2016,3,No,7.3
+Spring,"Justin Benson, Aaron Moorhead",2014,1,No,6.6
+Stake Land,Jim Mickle,2010,1,No,6.5
+Starfish,A.T. White,2018,4,No,5.3
+Starry Eyes,"Kevin Kolsch, Dennis Widmyer",2014,9,No,6
+Stephanie,Akiva Goldsman,2017,18,Yes,5.8
+Stir of Echoes,David Koepp,1999,9,No,7
+Summer of 84,"Anouk Whissell, François Simard, Yoann-Karl Whissell",2018,19,No,6.7
+Sunshine,Danny Boyle,2007,6,No,7.3
+Super 8,J.J. Abrams,2011,15,No,7.1
+Suspiria,Dario Argento,1977,6,No,7.5
+Suspiria,Luca Guadagnino,2018,2,No,7.1
+Sweetheart,Justin Dillard,2019,6,No,5.7
+Tales of Halloween,"Neil Marshall, Darren Lynn Bousman, Axelle Carolyn, Lucky McKee, Andrew Kasch, Paul Solet, John Skipp, Adam Gierasch, Jace Anderson, Mike Mendez, Ryan Schifrin, Dave Parker",2015,14,Yes,5.4
+Terrifier,Damien Leone,2017,18,Yes,5.7
+Texas Chainsaw 3D,John Luessenhop,2013,14,No,4.8
+The 9th Life of Louis Drax,Alexandre Aja,2016,4,No,6.3
+The Abandoned,Eytan Rockaway,2015,21,No,5
+The ABCs of Death,27 different directors,2012,0,No,4.7
+The Abyss,James Cameron,1989,2,No,7.6
+The Amityville Horror,Stuart Rosenberg,1979,8,No,6.2
+The Amityville Horror,Andrew Douglas,2005,17,No,6
+The Atticus Institute,Chris Sparling,2015,13,No,5.4
+The Autopsy of Jane Doe,André Øvredal,2016,12,Yes,6.8
+The Babadook,Jennifer Kent,2014,11,No,6.9
+The Babadook – Original Australian Blu-Ray at 25fps,Jennifer Kent,2014,11,No,6.9
+The Babysitter,McG,2017,8,Yes,6.6
+The Bay,Barry Levinson,2012,8,No,5.6
+The Belko Experiment,Greg McLean,2016,8,No,6.2
+The Blackcoat’s Daughter,Osgood Perkins,2015,3,No,5.9
+The Blair Witch Project,Daniel Myrick & Eduardo Sánchez,1999,0,No,6.4
+The Borderlands (Final Prayer),Elliot Goldner,2013,12,No,5.7
+The Boy,Craig Macneill,2015,1,No,5.4
+The Boy,William Brent Bell,2016,11,Yes,6
+The Burning,Tony Maylam,1981,21,No,6.5
+The Butterfly Effect,"Eric Bress, J. Mackye Gruber",2004,4,No,7.7
+The Bye Bye Man,Stacy Title,2017,13,No,4.3
+The Cabin In The Woods,Drew Goddard,2012,13,No,7
+The Call,Brad Anderson,2013,9,No,6.7
+The Canal,Ivan Kavanagh,2014,4,No,5.9
+The Changeling,Peter Medak,1980,7,No,7.3
+The Cloverfield Paradox,Julius Onah,2018,8,Yes,5.5
+The Collector,Marcus Dunstan,2009,2,No,6.4
+The Conjuring,James Wan,2013,12,Yes,7.5
+The Conjuring 2,James Wan,2016,22,No,7.4
+The Conspiracy,Christopher MacBride,2012,1,No,6.4
+The Conversation,Francis Ford Coppola,1974,1,No,7.9
+The Craft,Andrew Fleming,1996,4,No,6.3
+The Crazies,Breck Eisner,2010,18,No,6.6
+The Cropsey Incident,Julian Grant,2017,0,No,3.4
+The Crucifixion,Xavier Gens,2017,19,No,5
+The Cured,David Freyne,2017,16,No,5.6
+The Curse of La Llorona,Michael Chaves,2019,20,No,5.4
+The Dead Don’t Die,Jim Jarmusch,2019,0,No,5.6
+The Den,Zachary Donohue,2013,14,No,6.1
+The Descent,Neil Marshall,2005,16,No,7.2
+The Devil Inside,William Brent Bell,2012,8,No,4.1
+The Devil’s Backbone,Guillermo del Toro,2001,4,No,7.5
+The Devil’s Candy,Sean Byrne,2015,8,Yes,6.7
+The Devil’s Rejects,Rob Zombie,2005,0,No,6.9
+The Disappointments Room,D.J. Caruso,2016,9,Yes,3.9
+The Endless,"Justin Benson, Aaron Moorhead",2017,7,No,6.6
+The Evil Dead,Sam Raimi,1981,22,No,7.6
+The Exorcism of Emily Rose,Scott Derrickson,2005,8,No,6.7
+The Exorcist,William Friedkin,1973,10,No,8
+The Exorcist III,William Peter Blatty,1990,11,No,6.3
+The Eye,"Danny Pang, Oxide Chun Pang",2002,5,No,6.7
+The Eyes of My Mother,Nicolas Pesce,2016,0,Yes,6.3
+The Faculty,Robert Rodriguez,1998,11,No,6.4
+The Final Destination,David R. Ellis,2009,4,No,5.2
+The Final Girls,Todd Strauss-Schulson,2015,8,No,6.7
+The First Purge,Gerard McMurray,2018,8,No,5.2
+The Fly,David Cronenberg,1986,2,No,7.5
+The Fog,John Carpenter,1980,16,No,6.8
+The Forest,Jason Zada,2016,13,No,4.8
+The Forgotten,Joseph Ruben,2004,7,No,5.8
+The Fourth Kind,Olatunde Osunsanmi,2009,3,No,5.9
+The Gallows,Travis Cluff & Chris Lofing,2015,21,No,4.2
+The Gift,Joel Edgerton,2015,5,No,7.1
+The Girl with All the Gifts,Colm McCarthy,2016,3,No,6.8
+The Good Neighbor,Kasra Farahani,2016,7,Yes,6.3
+The Gracefield Incident,Mathieu Ratthe,2017,10,No,4.1
+The Green Inferno,Eli Roth,2013,4,No,5.3
+The Grudge,Nicholas Pesce,2020,19,No,4.2
+The Grudge,Takashi Shimizu,2004,23,No,5.9
+The Guest,Adam Wingard,2014,5,No,6.7
+The Hallow,Corin Hardy,2015,18,No,5.7
+The Happening,M. Night Shyamalan,2008,1,No,5
+The Harvest,John McNaughton,2013,0,No,5.9
+The Haunting,Robert Wise,1963,3,No,7.6
+The Haunting in Connecticut,Peter Cornwell,2009,26,No,5.9
+The Haunting in Connecticut 2: Ghosts of Georgia,Tom Elkins,2013,32,No,5.3
+The Heretics,Chad Archibald,2017,4,Yes,4.7
+The Hills Have Eyes,Alexandre Aja,2006,9,No,6.4
+The Hole,Nick Hamm,2001,3,No,6.2
+The House of the Devil,Ti West,2009,4,No,6.4
+The House on Pine Street,"Aaron Keeling, Austin Keeling",2015,5,No,5.3
+The House with a Clock in Its Walls,Eli Roth,2018,8,No,6.2
+The Howling,Joe Dante,1981,10,No,6.6
+The Human Centipede – First Sequence,Tom Six,2009,4,No,4.4
+The Hunt,Craig Zobel,2020,4,No,6.4
+The Innkeepers,Ti West,2011,9,No,5.5
+The Innocents,Jack Clayton,1961,4,No,7.9
+The Invisible Man,Leigh Whannell,2020,6,No,7.2
+The Invitation,Karyn Kusama,2015,5,Yes,6.6
+The Jacket,John Maybury,2005,6,No,7.1
+The Killing of a Sacred Deer,Yorgos Lanthimos,2017,3,No,7
+The Last Exorcism,Daniel Stamm,2010,7,No,5.6
+The Last House on the Left,Dennis Iliadis,2009,4,No,6.6
+The Lazarus Effect,David Gelb,2015,18,No,5.2
+The Lighthouse,Robert Eggers,2019,4,No,7.7
+The Limehouse Golem,Juan Carlos Medina,2016,0,No,6.4
+The Little Stranger,Lenny Abrahamson,2018,0,No,5.6
+The Lodge,Severin Fiala & Veronika Franz,2020,4,No,6.2
+The Love Witch,Anna Biller,2016,0,No,6.2
+The Lovebirds,Michael Showalter,2020,2,Yes,6
+The Meg,Jon Turteltaub,2018,18,No,5.7
+The Messengers,"Danny Pang, Oxide Chun Pang",2007,27,No,5.4
+The Midnight Meat Train,Ryûhei Kitamura,2008,1,No,6.2
+The Mist,Frank Darabont,2007,5,No,7.2
+The Monster,Bryan Bertino,2016,11,Yes,5.4
+The Mothman Prophecies,Mark Pellington,2002,4,No,6.5
+The Mummy,Alex Kurtzman,2017,16,No,5.5
+The Neighbor,Marcus Dunstan,2016,3,No,5.3
+The Neon Demon,Nicolas Winding Refn,2016,2,No,6.2
+The New Daughter,Luiso Berdejo,2009,11,No,5.3
+The Nightmare Gallery,Gene Blalock,2019,2,No,3.7
+The Ninth Gate,Roman Polanski,1999,0,No,6.7
+The Number 23,Joel Schumacher,2007,3,No,6.4
+The Nun,Corin Hardy,2018,21,No,5.3
+The Omen,Richard Donner,1976,1,No,7.6
+The Ones Below,David Farr,2015,0,Yes,6.1
+The Open House,"Matt Angel, Suzanne Coote",2018,14,Yes,3.3
+The Orphanage,J.A. Bayona,2007,6,No,7.5
+The Other Side of the Door,Johannes Roberts,2016,16,No,5.3
+The Others,Alejandro Amenábar,2001,4,No,7.6
+The Pact,Nicholas McCarthy,2012,12,No,5.8
+The People Under the Stairs,Wes Craven,1991,13,No,6.3
+The Perfection,Richard Shepard,2019,1,Yes,6.1
+The Possession,Ole Bornedal,2012,10,No,5.9
+The Possession of Michael King,David Jung,2014,20,No,5.7
+The Poughkeepsie Tapes,John Erick Dowdle,2007,4,No,6.1
+The Predator,Shane Black,2018,6,No,5.6
+The Purge,James DeMonaco,2013,12,No,5.6
+The Purge: Anarchy,James DeMonaco,2014,13,No,6.5
+The Purge: Election Year,James DeMonaco,2016,9,No,6
+The Pyramid,Grégory Levasseur,2014,14,Yes,4.6
+The Quiet Ones,John Pogue,2014,23,No,5.1
+The Return of the Living Dead,Dan O’Bannon,1985,1,No,7.3
+The Ring,Gore Verbinski,2002,9,No,7.1
+The Ring Two,Hideo Nakata,2005,11,No,5.4
+The Ring Virus,Kim Dong-bin,1999,3,No,6.1
+The Rite,Mikael Håfström,2011,7,Yes,6
+The Ritual,David Bruckner,2017,15,Yes,6.3
+The Sacrament,Ti West,2013,2,No,6.1
+The Sand,Isaac Gabaeff,2015,0,No,3.8
+The Shallows,Jaume Collet-Serra,2016,9,No,6.3
+The Shape of Water,Guillermo del Toro,2017,2,No,7.3
+The Shining,Stanley Kubrick,1980,3,Yes,8.5
+The Silence of the Lambs,Jonathan Demme,1991,0,No,8.6
+The Sixth Sense,M. Night Shyamalan,1999,8,Yes,8.2
+The Skeleton Key,Iain Softley,2005,11,No,6.5
+The Snowman,Tomas Alfredson,2017,9,No,5.1
+The Strangers,Bryan Bertino,2008,16,No,6.2
+The Strangers: Prey at Night,Johannes Roberts,2018,14,No,5.5
+The Taking of Deborah Logan,Adam Robitel,2014,19,No,6
+The Texas Chain Saw Massacre,Tobe Hooper,1974,2,No,7.5
+The Texas Chainsaw Massacre,Marcus Nispel,2003,16,No,6.2
+The Texas Chainsaw Massacre: The Beginning,Jonathan Liebesman,2006,17,Yes,5.9
+The Thing,Matthijs van Heijningen Jr.,2011,7,No,6.2
+The Thing,John Carpenter,1982,7,No,8.2
+The Town That Dreaded Sundown,Alfonso Gomez-Rejon,2014,8,No,5.6
+The Transfiguration,Michael O’Shea,2016,2,No,5.9
+The Tunnel,Carlo Ledesma,2011,6,No,5.9
+The Turning,Floria Sigismondi,2020,13,No,3.8
+The Unborn,David S. Goyer,2009,14,Yes,4.8
+The Uninvited,Charles & Thomas Guard,2009,11,Yes,6.4
+The Veil,Phil Joanou,2016,12,Yes,4.7
+The Village,M. Night Shyamalan,2004,4,No,6.5
+The Visit,M. Night Shyamalan,2015,8,No,6.2
+The Voices,Marjane Satrapi,2014,3,No,6.3
+The Void,"Jeremy Gillespie, Steven Kostanski",2016,8,Yes,5.8
+The Wailing,Na Hong-jin,2016,4,Yes,7.5
+The Ward,John Carpenter,2010,15,No,5.6
+The Wicker Man,Robin Hardy,1973,4,No,7.6
+The Witch,Robert Eggers,2015,4,Yes,6.8
+The Wolfman,Joe Johnston,2010,18,No,5.8
+The Woman in Black,James Watkins,2012,16,No,6.5
+The Woman in Black 2: Angel of Death,Tom Harper,2014,14,No,4.9
+Them,"David Moreau, Xavier Palud",2006,16,No,6.5
+Thesis,Alejandro Amenábar,1996,3,No,7.5
+They Look Like People,Perry Blackshear,2015,2,No,6.1
+Thirteen Ghosts,Steve Beck,2001,17,No,5.5
+Timecrimes,Nacho Vigalondo,2007,3,No,7.2
+Tragedy Girls,Tyler Macintyre,2017,8,No,6.1
+Train to Busan,Sang-ho Yeon,2016,4,Yes,7.5
+Trash Fire,Richard Bates Jr.,2016,0,Yes,5.8
+Tremors,Ron Underwood,1990,16,No,7.1
+Triangle,Christopher Smith,2009,5,No,6.9
+Trick ‘r Treat,Michael Dougherty,2007,6,No,6.8
+Truth or Dare,Jeff Wadlow,2018,7,No,4.8
+Tucker and Dale vs. Evil,Eli Craig,2010,9,No,7.6
+Tusk,Kevin Smith,2014,0,Yes,5.4
+Under the Shadow,Babak Anvari,2016,9,Yes,7
+Unfriended,Leo Gabriadze,2014,5,No,5.8
+Unfriended: Dark Web,Stephen Susco,2018,6,No,5.9
+Unsane,Steven Soderbergh,2018,2,No,6.7
+Urban Legend,Jamie Blanks,1998,17,No,5.5
+Us,Jordan Peele,2019,11,No,6.9
+Uzumaki,Higuchinsky,2000,15,No,6.2
+V/H/S,"Matt Bettinelli-Olpin, David Bruckner, Tyler Gillett, Justin Martinez, Glenn McQuaid, Radio Silence, Joe Swanberg, Chad Villella, Ti West, Adam Wingard",2012,7,No,5.8
+V/H/S/2,"Simon Barrett, Jason Eisener, Gareth Evans, Gregg Hale, Eduardo Sánchez, Timo Tjahjanto, Adam Wingard",2013,14,No,6.1
+Vacancy,Nimród Antal,2007,12,No,6.2
+Van Helsing,Stephen Sommers,2004,3,No,6.1
+Velvet Buzzsaw,Dan Gilroy,2019,10,Yes,5.7
+Venom,Ruben Fleischer,2018,10,Yes,6.7
+Veronica,Paco Plaza,2017,10,Yes,6.5
+Victor Frankenstein,Paul McGuigan,2015,6,No,6
+Viral,"Henry Joost, Ariel Schulman",2016,20,No,5.5
+Visions,Kevin Greutert,2015,10,No,5.3
+Wait Until Dark,Terence Young,1967,1,No,7.9
+We Are Still Here,Ted Geoghegan,2015,12,No,5.7
+Wes Craven’s New Nightmare,Wes Craven,1994,11,No,6.4
+What Lies Beneath,Robert Zemeckis,2000,16,No,6.6
+What the Waters Left Behind,"Luciano Onetti, Nicolás Onetti",2017,5,No,4.9
+When a Stranger Calls,Fred Walton,1979,5,No,6.6
+Wildling,Fritz Böhm,2018,4,No,5.5
+Winchester,"Michael Spierig, Peter Spierig",2018,17,No,5.4
+Wind Chill,Gregory Jacobs,2007,13,No,5.9
+Wish Upon,John R. Leonetti,2017,11,No,4.8
+Wolf Creek,Greg McLean,2005,0,No,6.3
+World War Z,Marc Forster,2013,7,No,7
+Would You Rather,David Guy Levy,2012,3,Yes,5.8
+Wounds,Babak Anvari,2019,6,Yes,4
+Wrong Turn,Rob Schmidt,2003,13,No,6.1
+You Might Be the Killer,Brett Simmons,2018,6,No,5.9
+You’re Next,Adam Wingard,2011,11,No,6.5
+Zodiac,David Fincher,2007,3,No,7.7
+Zombieland,Ruben Fleischer,2009,9,No,7.7
+Zombieland: Double Tap,Ruben Fleischer,2019,2,No,6.7
