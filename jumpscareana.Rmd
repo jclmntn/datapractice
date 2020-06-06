@@ -110,31 +110,6 @@ ggplot(scare_table, aes(x = year, y = jump_count)) +
 ```
   
   Aparentemente, filmes mais recentes possuem um maior número de jumpscares. No entanto, isso pode estar acontecendo porque a duração dos filmes vem aumentando nos últimos anos. A base em questão não possui a duração dos filmes em minutos para que essa hipótese seja testada, mas algo nesse sentido pode ser feito num texto posterior.
-
-  <!-- Como sou curioso, quero verificar a relação entre o total de filmes e de jumpscares num ano qualquer. Para isso, eu irei normalizar as duas novas variáveis através de uma função criada a partir da seguinte fórmula: $$\frac{x_i - \min(x)}{\max(x) - \min(x)}$$. 
-  
-```{r}
-# 
-# normalize <- function(x){
-#   (x - min(x))/(max(x) - min(x))
-# }
-# 
-# scare_table %>% 
-#   group_by(year) %>% 
-#   summarize(
-#     total_jumps = sum(jump_count),
-#     total_movies = n()
-#   ) %>% 
-#   mutate(
-#     n_jump = normalize(total_jumps), 
-#     n_movies = normalize(total_movies)
-#   ) %>% 
-#   ggplot(aes(x = year)) + 
-#   geom_line(aes(y = n_jump), color = 'blue', size = 1.5) +
-#   geom_line(aes(y = n_movies), color = 'red', size = 1.5)
-```
--->
-  
   Uma outra pergunta interessante é a seguinte: a qualidade dos filmes de terror (assumindo que nota = qualidade) está aumentando com o passar dos anos?
 
 ```{r}
