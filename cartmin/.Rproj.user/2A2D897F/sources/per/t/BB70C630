@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1604890844816.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1486548040",
+    "id" : "BB70C630",
+    "lastKnownWriteTime" : 1603497638,
+    "last_content_update" : 1603497638,
+    "path" : "C:/Users/splin/Desktop/r programming/ivair/trabalho ivair2.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "21,55",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

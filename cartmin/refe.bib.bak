@@ -1,0 +1,51 @@
+% Encoding: UTF-8
+
+@Book{James2017,
+  title     = {An Introduction to Statistical Learning},
+  publisher = {Springer-Verlag GmbH},
+  year      = {2017},
+  author    = {James, Gareth and Witten, Daniela and Hastie, Trevor and Tibshirani, Robert},
+  isbn      = {1461471370},
+  date      = {2017-09-01},
+  ean       = {9781461471370},
+  url       = {https://www.ebook.de/de/product/20292548/gareth_james_daniela_witten_trevor_hastie_robert_tibshirani_an_introduction_to_statistical_learning.html},
+}
+
+@Book{Qian2007,
+  title     = {Quantitative Equity Portfolio Management: Modern Techniques and Applications},
+  publisher = {CRC PR INC},
+  year      = {2007},
+  author    = {Qian, Edward E. and Sorensen, Eric H. and Hua, Ronald H.},
+  isbn      = {1584885580},
+  date      = {2007-04-01},
+  ean       = {9781584885580},
+  pagetotal = {444},
+  url       = {https://www.ebook.de/de/product/5986524/edward_e_qian_eric_h_sorensen_ronald_h_hua_quantitative_equity_portfolio_management_modern_techniques_and_applications.html},
+}
+
+@Book{DavidRuppert2015,
+  title     = {Statistics and Data Analysis for Financial Engineering},
+  publisher = {Springer New York},
+  year      = {2015},
+  author    = {David Ruppert, David S. Matteson},
+  isbn      = {1493926136},
+  date      = {2015-04-22},
+  ean       = {9781493926138},
+  pagetotal = {748},
+  url       = {https://www.ebook.de/de/product/23646142/david_ruppert_david_s_matteson_statistics_and_data_analysis_for_financial_engineering.html},
+}
+
+@Article{Markowitz1952,
+  author    = {Harry Markowitz},
+  title     = {Portfolio Selection},
+  journal   = {The Journal of Finance},
+  year      = {1952},
+  volume    = {7},
+  number    = {1},
+  pages     = {77},
+  month     = {mar},
+  doi       = {10.2307/2975974},
+  publisher = {{JSTOR}},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

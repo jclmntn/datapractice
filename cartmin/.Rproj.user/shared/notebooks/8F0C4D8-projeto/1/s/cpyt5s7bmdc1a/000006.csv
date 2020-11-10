@@ -1,0 +1,78 @@
+"0","# dados do ibovespa"
+"0","suppressWarnings(getSymbols(""^BVSP"", from = ""2020-02-02"", to =""2020-10-31"", warnings = FALSE))"
+"1","[1]"
+"1"," ""^BVSP"""
+"1","
+"
+"0","# gerando resultados da carteira de dois ativos"
+"0",""
+"0","alpha <- min_var_1(returns)"
+"0","data_two <- returns %>% "
+"0","  mutate(weighted = 1 + alpha * PSSA3.SA + (1-alpha) * ITUB3.SA,"
+"0","         result = cumprod(weighted)-1) %>% "
+"0","  select(date, result)"
+"0",""
+"0","# gerando resultados da carteira de 10 ativos com a opção de se operar vendido"
+"0","weight_vector <- min_var_2(data)"
+"0","data_short <- data %>% "
+"0","  mutate(weighted = pmap(data[, - 1], ~c(...)) %>% "
+"0","           map_dbl(function(x) 1 + (x %*% t(weight_vector))),"
+"0","         result = cumprod(weighted)-1"
+"0","         ) %>% "
+"0","  select(date, result)"
+"0",""
+"0","data_no_short <-  data %>% "
+"0","  mutate(weighted = pmap(data[, - 1], ~c(...)) %>% "
+"0","           map_dbl(function(x) 1 + (x %*% (weights))),"
+"0","         result = cumprod(weighted)-1"
+"0","         ) %>% "
+"0","  select(date, result)"
+"0","# carteira do nosso amigo"
+"0",""
+"0","more_weights <- c(0.1041, 0.2091, 0.1291, 0.1043, 0.726, 0.763, .449, 0.2371, 0.225)"
+"0","data_friend <- data %>% "
+"0","  mutate(weighted = pmap(data[, - 1], ~c(...)) %>% "
+"0","           map_dbl(function(x) 1 + (x %*% (more_weights))),"
+"0","         result = cumprod(weighted)-1"
+"0","         ) %>% "
+"0","  select(date, result)"
+"0","  "
+"0","# gerando os resultados do ibov"
+"0",""
+"0","data_bvsp <- dailyReturn(BVSP) %>% "
+"0","  tidy %>% "
+"0","  mutate(result = cumprod(1 + value) - 1) %>% "
+"0","  select(date = index, result)"
+"2","missing values removed from data"
+"0","# criando tabela com todos os ret"
+"0",""
+"0","final <- reduce(list(data_two, data_short, data_no_short, data_friend, data_bvsp), bind_cols) %>% "
+"0","  select(-starts_with(""date""), date...1) %>%"
+"0","  set_names(., nm = c(""amigo"", ""vendido"", ""sem"", ""friend"", ""bvsp"", ""date"")) %>% "
+"0","  pivot_longer(cols = -date, names_to = ""series"")"
+"2","New names:
+* date -> date...1
+* result -> result...2
+* date -> date...3
+* result -> result...4
+"
+"2","New names:
+* date -> date...5
+* result -> result...6
+"
+"2","New names:
+* date -> date...7
+* result -> result...8
+"
+"2","New names:
+* date -> date...9
+* result -> result...10
+"
+"0","final %>% "
+"0","  ggplot(aes(x = date)) +"
+"0","  geom_line(aes(y = value, color = series)) + "
+"0","  scale_y_continuous(labels = scales::percent) +"
+"0","  scale_color_discrete(name = ""Benchmark"", labels = c(""Ibovespa"", ""2 ativos"", ""Carteira amigo"", ""9 ativos sem venda"", ""9 ativos"")) +"
+"0","  labs(y = ""Resultado acumulado (%)"","
+"0","       x = ""Data"")"
+"0",""

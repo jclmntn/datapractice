@@ -1,0 +1,304 @@
+---
+title: "Carteira de Mínima Variância usando R"
+author: "José Clementino"
+date: "`r format(Sys.time(), '%d %B de %Y')`"
+output:
+  html_notebook:
+    number_sections: true
+bibliography: bibliography.bib
+csl: associacao-brasileira-de-normas-tecnicas.csl
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+
+# Introdução
+
+Nesse breve texto, eu^[Se você vir algum erro, tiver alguma dúvida ou quiser discutir alguma ideia interessante não hesite em me mandar um e-mail: jclmntn@gmail.com] introduzirei o portfólio de mínima variância: uma carteira composta por diversos ativos em que os pesos de cada um dos produtos participantes minimizam a variância total do portfólio. Essa é uma ideia bastante antiga, sendo introduzida inicialmente por @Markowitz1952 e é princípio fundamental da teoria moderna de portfólios. Primeiro vamos começar com um portfólio simples que contenha apenas dois ativos e depois vamos encontrar um meio de generalizar isso para mais ativos.
+
+# A ideia
+
+Vamos dizer que você quer montar uma carteira^[Ou portfólio, é você quem manda. Daqui por diante vou usar só carteira!] com dois ativos e quer que a combinação resulte na menor volatilidade possível. Como fazemos isso? Suponha dois ativos X e Y cujos retornos sejam variáveis aleatórias. O nosso objetivo é escolher um $\alpha$ que que minimize:
+
+$$
+\begin{align*}
+Var(\alpha X + (1-\alpha)Y)
+\end{align*}
+$$
+Lembre-se que:
+
+$$
+\begin{align*}
+Var(\alpha X + (1-\alpha)Y) = \alpha^2Var(X) + (1-\alpha)^2Var(Y) +2\alpha(1-\alpha)Cov(X, Y)
+\end{align*}
+$$
+
+
+Se você não estiver muito seguro(a) quanto ao seu conhecimento de cálculo I, confie em mim quando eu digo que a variância é uma função convexa. Sabendo disso, o ponto crítico da variância é um ponto de mínimo. Quando derivamos a função com relação a $\alpha$, igualamos a $0$ e fazemos algumas pequenas manipulações vamos obter:
+
+$$
+\begin{align}
+\frac{d(Var(\alpha X + (1-\alpha)Y)}{d\alpha} = 0 &\iff 2\alpha Var(x) - 2(1-\alpha)Var(Y) + 2(1-\alpha)Cov(X, Y)-2\alpha Cov(X, Y)=0\\
+&\iff 2\alpha Var(X)-2Var(Y)+2\alpha Var(Y) + 2Cov(X, Y) - 4\alpha Cov(X, Y) = 0\\
+&\iff 2\alpha Var(X) +2\alpha Var(Y) - 4\alpha Cov(X, Y) = 2Var(Y)-2Cov(X, Y) \\
+&\iff 2\alpha[Var(X)+Var(Y)-2Cov(X, Y)] = 2Var(Y) - 2Cov(X, Y)\\
+&\iff \alpha = \frac{Var(Y) - Cov(X, Y)}{Var(X)+Var(Y)-2Cov(X, Y)}
+\end{align}
+$$
+
+Pronto, encontramos o $\alpha$ que minimiza a variância de uma carteira com dois ativos. Mas e se quiséssemos generalizar isso para uma carteira de $N$ ativos? @Qian2007 tem a resposta. Denotamos $\boldsymbol{\Sigma}$ como a matriz de covariância, $\boldsymbol{i}$ é um vetor em que todos os seus elementos são o número um e $\boldsymbol{w}$ é o vetor de pesos para cada um dos ativos na carteira. Daí seremos confrontados pelo seguinte problema:
+
+$$
+\begin{align*}
+&min\ \  \frac{1}{2}\boldsymbol{w}\boldsymbol{\Sigma}\boldsymbol{w^T}\\
+&s.a. \ \boldsymbol{w\cdot i^T }= w_1+w_2+\ldots+w_N = 1
+\end{align*}
+$$
+Transformando esse problema num lagrangiano e usando cálculo vetorial, vamos descobrir que o vetor de mínima variância será:
+
+$$
+\begin{align*}
+\boldsymbol{w^*} = \frac{\boldsymbol{\Sigma^{-1}i^T}}{\boldsymbol{i\Sigma^{-1}i^T}}
+\end{align*}
+$$
+
+Da maneira que o problema foi construído, pode haver a possibilidade de que um dos pesos $w_i$ seja negativo. A restrição não seria violada de maneira alguma, mas tal peso implicaria que o gestor do carteira deveria operar vendendo a descoberto (alugar a ação em questão e vendê-la). Para garantir que os pesos sejam positivos, uma outra restrição importante deve ser adicionada ao problema:
+
+$$
+\begin{align*}
+ w_i\geq  0,\ i\in\{1,\dots ,N\} 
+\end{align*}
+$$
+Tal restrição torna a natureza do problema mais complexa. Na verdade, o problema em questão não contém solução analítica quando as restrições são mistas @Qian2007 [p. 375], isso nos leva a solucionar o problema numericamente. @DavidRuppert2015 explicam o método que eu utilizarei para resolver o problema. Mais a frente, quando formos utilizá-lo, eu te darei uma ideia geral de como ele funciona.
+
+
+Agora, usando o que foi apresentado até aqui, vamos construir duas carteiras hipotéticas usando ativos quaisquer (na verdade, fazem parte da carteira de um amigo). A primeira carteira vai conter 2 ativos e depois vamos construir uma outra com 10.
+
+# Construindo carteiras 
+
+Os dados referentes aos preços diários serão retirados do Yahoo Finanças usando o pacote `quantmod`. Para transformar a estrutura dos dados de `xts` para `tibble`, vamos utilizar o pacote `broom`. Pretendemos usar outros pacotes da coleção `tidyverse` e, portanto, vamos convenientemente incluí-los nessa lista.  O período de tempo que vamos usar é de 02 de fevereiro de 2020 até o final de outubro desse mesmo ano.
+
+## Carteira de 2 ativos
+Vamos começar com o exemplo mais simples estimando um $\alpha$ que minimize uma carteira de dois ativos com base na amostra.
+
+```{r warning=FALSE, error=FALSE, message=FALSE}
+suppressWarnings(library(quantmod))
+library(tidyverse)
+library(broom)
+
+
+# objeto com o nome dos ativos
+
+tickers <- c("PSSA3.SA", "ITUB3.SA")
+
+# baixando os dados e calculando os retornos aritméticos diários 
+
+suppressWarnings(getSymbols(tickers, from = "2020-02-02", to ="2020-10-31", warnings = FALSE))
+x <- suppressWarnings(dailyReturn(get(tickers[1])))
+y <- suppressWarnings(dailyReturn(get(tickers[2])))
+
+returns <- tidy(merge(x, y)) %>% 
+  pivot_wider(names_from = series, values_from = value) %>% 
+  set_names(., nm = c("date", tickers))
+returns
+```
+
+Uma breve olhada nos dados sugere que o retorno dos ativos escolhidos são correlacionados:
+```{r}
+theme_set(theme_minimal())
+
+
+returns %>% 
+  ggplot(aes(x = PSSA3.SA, y = ITUB3.SA)) +
+  geom_point()
+
+```
+
+
+Com os dados prontos, agora só temos que definir a função com base no nosso primeiro resultado e encontrar o peso ótimo para cada um dos ativos. A função está definida como em @James2017[p. 194].
+
+```{r}
+
+min_var_1 <- function(data){
+  data <- data[, -1]
+  x <- pull(data, 1)  #dplyr::pull extrai a coluna como vetor
+  y <- pull(data, 2)
+  
+  alpha <- (var(y) - cov(x, y)) / (var(x) + var(y) - 2*cov(x, y))
+  return(alpha)
+}
+
+# aplicando a função nos nossos dados
+
+min_var_1(returns)
+
+```
+
+Numa carteira de dois ativos teríamos um $\alpha = 0,6249287$. Ou seja, para minimizar a variância da carteira, a cada um real investido, cerca de $R\$0,62$ devem ser investidos em PSSA3.
+
+## Carteira de 9 ativos
+
+Agora, vamos usar a derivação mais complexa para obter os pesos de um portfólio de miníma variância que contenha 9 ativos. O próximo bloco de código poderia ser facilmente envolvido por uma função que generaliza os passos para $N$ ativos. 
+```{r message=FALSE, warning=FALSE, error=FALSE}
+# definindo nome das ações
+tickers <- c("RAIL3.SA", "WEGE3.SA", "ITUB3.SA", "PSSA3.SA", "KLBN3.SA", "CVCB3.SA", "TOTS3.SA", "IRBR3.SA", "SQIA3.SA")
+
+# extraindo os dados
+suppressWarnings(getSymbols(tickers, from = "2020-02-02", to ="2020-10-31", warnings = FALSE))
+
+# criando um objeto que contenha só os retornos e as datas
+data <- map(tickers, ~get(.x)) %>% 
+  tibble %>%
+  mutate(returns = map(., ~suppressWarnings(dailyReturn(.x)))) %>% 
+  .$returns %>% 
+  reduce(., merge) %>% 
+  tidy %>% 
+  pivot_wider(names_from = series, values_from = value) %>% 
+  set_names(., c("date", tickers))
+
+data
+
+
+
+```
+
+Finalmente,  vamos observar o quão correlacionados estão os ativos da nossa carteira. Uma rápida inspeção na visualização aponta que os ativos estão todos positivamente correlacionados.
+
+```{r}
+corrplot::corrplot(cor(data[, -1]), type = "upper")
+```
+
+Agora nos resta definir a função que cria os pesos para compor a carteira de mínima variância.
+
+```{r}
+min_var_2 <- function(data){
+  i <- rep(1, ncol(data)-1)
+  inverse_cov <- solve(cov(data[,-1]))
+  weights <- (i%*% inverse_cov) / as.numeric(i %*% inverse_cov %*% i)
+  return(weights)
+}
+
+min_var_2(data)
+
+```
+
+A soma dos pesos é de fato um, mas alguns desses pesos são negativos. Isso implica que o gestor da carteira deveria operar vendendo ações como CVCB3, SQIA3 e RAIL3. 
+
+## Carteira de 9 ativos sem venda a descoberto
+Esse é um problema um pouco mais trabalhoso. Como já mencionado anteriormente, sugiro que você leia [@DavidRuppert2015, 475]para entender o que está sendo feito, mas basicamente estamos transformando o problema de restrições mistas num problema de programação quadrática. Como eu não quero te deixar no escuro, vou te dar uma ideia geral do que está sendo feito. Nós transformamos o problema:
+
+$$
+\begin{align*}
+min\ \  &\frac{1}{2}\boldsymbol{w}\boldsymbol{\Sigma}\boldsymbol{w^T}\\
+s.a. \ &\boldsymbol{w\cdot i^T }= w_1+w_2+\ldots+w_N = 1\\
+ &w_i\geq  0,\ i\in\{1,\dots ,N\} 
+\end{align*}
+$$
+Em algo como:
+$$
+\begin{align*}
+min\ \ &\frac{1}{2}xDx^T-dx^T\\
+s.a. \ &A_{neq}x \geq b_{neq}\\
+&A_{eq}x = b_{eq}
+\end{align*}
+$$
+No nosso caso, $D = 2\Sigma$, $d = (0, \ldots,0)$. As matrizes $A_{eq}$ e $A_{neq}$ contêm os coeficientes dos elementos das equações e inequações respectivamente. As duas matrizes vão compor a matriz $A = \big(\begin{smallmatrix}A_{eq}&A_{neq}\end{smallmatrix}\big)$. Os vetores $b_{eq}$ e $b_{neq}$ são os valores das restrições. Esses valores vão compor o vetor $b = \big(b_{eq}\ b_{neq})$. O algoritmo no pacote `quadprog` resolve o lagrangiano do problema contanto que você identifique $D, d, A e b$.
+
+```{r}
+library(quadprog)
+
+i <- rep(1, ncol(data)-1)
+column_number <- ncol(data[,-1])
+cov_mat <- cov(data[, -1])
+a_mat <- cbind(i, diag(1, ncol = column_number, nrow = column_number))
+b <- c(1, rep(0, column_number))
+
+weights <- solve.QP(Dmat = 2*cov_mat, Amat = a_mat, dvec = rep(0, column_number), bvec = b, meq = 1)$solution
+names(weights) <- tickers
+
+round(weights, digits = 6)
+
+```
+
+Sem a possibilidade de se operar vendido, a carteira devia ser composta por ITUB3, PSSA3, TOTS3 e KLBN3.
+
+# Backtesting
+
+A história não se repete [@AS1933] (leia, é curto). Ainda assim, vamos comparar como os nossos construtos se comportariam de fevereiro a outubro em conjunto com outros benchmarks, como o índice Bovespa e a própria carteira do meu amigo.
+
+```{r}
+# dados do ibovespa
+suppressWarnings(getSymbols("^BVSP", from = "2020-02-02", to ="2020-10-31", warnings = FALSE))
+
+# gerando resultados da carteira de dois ativos
+
+alpha <- min_var_1(returns)
+data_two <- returns %>% 
+  mutate(weighted = 1 + alpha * PSSA3.SA + (1-alpha) * ITUB3.SA,
+         result = cumprod(weighted)-1) %>% 
+  select(date, result)
+
+# gerando resultados da carteira de 10 ativos com a opção de se operar vendido
+weight_vector <- min_var_2(data)
+data_short <- data %>% 
+  mutate(weighted = pmap(data[, - 1], ~c(...)) %>% 
+           map_dbl(function(x) 1 + (x %*% t(weight_vector))),
+         result = cumprod(weighted)-1
+         ) %>% 
+  select(date, result)
+
+data_no_short <-  data %>% 
+  mutate(weighted = pmap(data[, - 1], ~c(...)) %>% 
+           map_dbl(function(x) 1 + (x %*% (weights))),
+         result = cumprod(weighted)-1
+         ) %>% 
+  select(date, result)
+# carteira do nosso amigo
+
+more_weights <- c(0.1041, 0.2091, 0.1291, 0.1043, 0.726, 0.763, .449, 0.2371, 0.225)
+data_friend <- data %>% 
+  mutate(weighted = pmap(data[, - 1], ~c(...)) %>% 
+           map_dbl(function(x) 1 + (x %*% (more_weights))),
+         result = cumprod(weighted)-1
+         ) %>% 
+  select(date, result)
+  
+# gerando os resultados do ibov
+
+data_bvsp <- dailyReturn(BVSP) %>% 
+  tidy %>% 
+  mutate(result = cumprod(1 + value) - 1) %>% 
+  select(date = index, result)
+
+
+# criando tabela com todos os retornos
+
+final <- suppressWarnings(reduce(list(data_two, data_short, data_no_short, data_friend, data_bvsp), bind_cols)) %>% 
+  select(-starts_with("date"), date...1) %>%
+  set_names(., nm = c("amigo", "vendido", "sem", "friend", "bvsp", "date")) %>% 
+  pivot_longer(cols = -date, names_to = "series")
+
+final %>% 
+  ggplot(aes(x = date)) +
+  geom_line(aes(y = value, color = series)) + 
+  scale_y_continuous(labels = scales::percent) +
+  scale_color_discrete(name = "Benchmark", labels = c("Ibovespa", "2 ativos", "Carteira amigo", "9 ativos sem venda", "9 ativos")) +
+  labs(y = "Resultado acumulado (%)",
+       x = "Data")
+
+```
+
+Todas as carteiras performaram bastante mal durante o período. A carteira que teve menos perdas foi a que permitia que o gestor operasse vendido. 
+
+# Limitações, extensões e observações
+
+* Eu não mencionei isso ao longo do trabalho, mas o portfólio de mínima variância presume preços normalmente distribuídos.  Ver @Qian2007 [p. 24].
+
+* É possível construir intervalos de confiança para os pesos usando algum método de reamostragem. É um processo bastante trabalhoso e pode ser tema de um próximo relatório como esse. 
+
+* Essa definitivamente não é uma sugestão, indicação ou qualquer coisa do tipo.
+
+# Referências

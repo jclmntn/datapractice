@@ -1,0 +1,27 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1604883725325.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1405009666",
+    "id" : "E212080C",
+    "lastKnownWriteTime" : 1605043959,
+    "last_content_update" : 1605043959178,
+    "path" : "C:/Users/splin/Desktop/r programming/carteira de minima variancia/projeto.Rmd",
+    "project_path" : "projeto.Rmd",
+    "properties" : {
+        "chunk_output_type" : "inline",
+        "cursorPosition" : "297,142",
+        "scrollLine" : "292",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

@@ -1,0 +1,88 @@
+# trabalho ivair 2
+options(scipen=1000000)
+library(quantmod)
+library(tidyverse)
+library(broom)
+library(boot)
+library(readr)
+library(meboot)
+stock_index <- c('ITUB4.SA', 'ABEV3.SA')
+getSymbols(stock_index, verbose = TRUE, src = "yahoo", from = "2016-10-13", to = "2020-10-21")
+
+ITUB4.SA$itub4_returns <- periodReturn(ITUB4.SA, 'daily')
+ABEV3.SA$abev3_returns <- periodReturn(ABEV3.SA, 'daily')
+#PETR4.SA$petr4_returns <- periodReturn(PETR4.SA, 'daily')
+
+
+portfolio_ts <- merge(x = ITUB4.SA$itub4_returns, y = ABEV3.SA$abev3_returns )
+
+# colocando os dados numa versão que não seja série de tempo
+
+portfolio <- tidy(portfolio_ts) %>% 
+  pivot_wider(names_from = series, values_from = value) %>% 
+  set_names(., c('date', 'x', 'y')) %>% 
+  filter(is.na(y) != TRUE)
+
+
+# a função que buscamos otimizar é:
+
+alpha_function <- function(data, index){
+  x <- data$x[index]
+  y <- data$y[index]
+  return((var(y) - cov(x, y))/(var(x) + var(y)-2 * cov(x, y)))
+}
+
+# com base na amostra, o alpha estimado é:
+
+alpha_function(portfolio, index = seq(1, nrow(portfolio)))
+
+
+# usando bootstrapping
+
+runs <- map(c(10, 100, 1000, 10000, 100000), ~boot(portfolio, statistic = alpha_function, R = .))
+
+# distribuições
+
+dist_data <- map(runs, ~as_tibble(.x$t)) %>% set_names(., nm = c(10, 100, 1000, 10000, 100000)) %>% bind_rows(.id = 'B')
+
+theme_set(theme_minimal())
+p <- ggplot(dist_data, aes(x = V1)) +
+  geom_histogram(color = 'black', fill = '#fc8803', alpha = 0.5) +
+  facet_wrap(. ~ B, scales = "free_y", nrow = 3) +
+  labs(x = expression(hat(alpha)),
+       y = 'Frequência') +
+  theme(strip.background = element_rect(colour = "black", fill = "#fcba03"))
+
+ggsave(plot = p, device = "bmp", filename = 'bootstrapping.bmp')
+# resultados 
+
+results <- map(runs, ~tidy(.x)) %>% set_names(., nm = c(10, 100, 1000, 10000, 100000)) %>% bind_rows(.id = 'B')
+write_csv(results, "resultados1.csv")
+
+
+# construir intervalos de confiança
+boot.ci(runs[[1]], type = c('norm', 'basic', 'perc'))
+
+################## usando Block Bootstrap
+names(portfolio_ts) <- c('x', 'y')
+portfolio_ts <- portfolio_ts[complete.cases(portfolio_ts),]
+
+# usando o boostrapping
+
+runs10 <- map(c(10, 100, 1000, 10000, 100000), ~tsboot(portfolio_ts, alpha_function, R = ., l = 10, sim = 'fixed'))
+dist_data10 <- map(runs10, ~as_tibble(.x$t)) %>% set_names(., nm = c(10, 100, 1000, 10000, 100000)) %>% bind_rows(.id = 'B')
+
+results10 <- map(runs10, ~tidy(.x)) %>% set_names(., nm = c(10, 100, 1000, 10000, 100000)) %>% bind_rows(.id = 'B')
+write_csv(results10, "resultados2.csv")
+
+
+
+p2 <- ggplot(dist_data10, aes(x = V1)) +
+  geom_histogram(color = 'black', fill = '#fc8803', alpha = 0.5) +
+  facet_wrap(. ~ B, scales = "free_y", nrow = 3) +
+  labs(x = expression(hat(alpha)),
+       y = 'Frequência') +
+  theme(strip.background = element_rect(colour = "black", fill = "#fcba03"))
+
+ggsave(plot = p2, device = "bmp", filename = 'bootstrapping2.bmp')
+# usando me
